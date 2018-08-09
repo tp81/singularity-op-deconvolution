@@ -1,5 +1,7 @@
 FROM neurodebian
 
-RUN apt-get update && apt-get install singularity-container
+RUN apt-get update -y && apt-get -y install singularity-container
 
-ENTRYPOINT ["bash","-c","singularity"]
+ENTRYPOINT ["singularity"]
+
+CMD ["-h"]
